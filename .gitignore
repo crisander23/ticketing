@@ -1,0 +1,21 @@
+﻿# Secrets
+.env
+.env.*
+!/.env.example
+upload/include/ost-config.php
+
+# Real database dumps and backups
+*.sql
+*.sql.gz
+*.bak
+transfer-backups/
+portable-image-package/
+pre-fix-backups/
+archived-web-tools/
+backup-*/
+
+# Local/generated files
+build-log.txt
+.claude/
+.DS_Store
+Thumbs.db

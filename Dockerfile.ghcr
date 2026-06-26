@@ -1,0 +1,8 @@
+FROM osticket-osticket:latest
+
+WORKDIR /var/www/html
+COPY upload/ /var/www/html/
+
+RUN rm -rf /var/www/html/setup \
+ && if [ -f /var/www/html/include/ost-config.php ]; then chmod 640 /var/www/html/include/ost-config.php; fi \
+ && chown -R www-data:www-data /var/www/html/include /var/www/html/assets /var/www/html/scp 2>/dev/null || true
